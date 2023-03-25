@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  todoapp-ui:
+    container_name: todoapp-ui
+    build:
+      context: .
+      dockerfile: Dockerfile.Development
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV='Development'

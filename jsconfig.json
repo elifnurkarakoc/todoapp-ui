@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "./",
+    "paths": {
+      "App/*": ["./app/*"],
+      "Components/*": ["app/components"],
+      "Routes/*": ["app/routes"],
+      "Store/*": ["app/store"],
+      "Views/*": ["app/views"],
+      "Assests/*":["app/assets"],
+      "Services/*":["app/Services"],
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "eslint.options": {
+    "configFile":".eslintrc.js"
+  },
+  "tslint.enable":false
+}
