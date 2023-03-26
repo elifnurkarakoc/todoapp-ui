@@ -1,8 +1,9 @@
 /** Dependencies */
 import BaseService from './BaseService';
 
+const API_URL = 'https://todoapp-api-3wdz.onrender.com/';
 const baseService = new BaseService({
-  baseURL: window?.TODOConfig?.API_URL,
+  baseURL: window?.TODOConfig?.API_URL || API_URL,
 });
 
 class TodoService {

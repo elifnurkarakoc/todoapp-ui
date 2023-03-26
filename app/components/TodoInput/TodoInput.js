@@ -34,7 +34,6 @@ const TodoInput = ({ onSubmit }) => {
         value={inputValue}
         onChange={(e) => handleChange(e)}
       />
-      {inputValue?.length}
       <Button text="Add" type="submit" />
     </form>
   );

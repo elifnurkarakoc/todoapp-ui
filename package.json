@@ -17,8 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --config webpack.dev.js",
-    "start:prod": "webpack-dev-server --mode development --https --config webpack.prod.js",
+    "start": "cross-env NODE_ENV=Development webpack-dev-server --mode development --config webpack.dev.js",
+    "start:prod": "cross-env NODE_ENV=Production webpack-dev-server --mode development --https --config webpack.prod.js",
     "build": "webpack-cli --mode production --config webpack.prod.js",
     "lint": "yarn run eslint && yarn run prettier",
     "eslint": "eslint app/**/*.js --fix",
