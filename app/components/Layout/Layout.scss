@@ -1,0 +1,10 @@
+.layoutHolder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 20px 160px;
+
+  @include respond-to(max-small-screens) {
+    margin: 10px 20px;
+  }
+}

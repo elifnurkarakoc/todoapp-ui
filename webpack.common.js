@@ -40,6 +40,8 @@ module.exports = {
       Views: path.resolve(__dirname, 'app/views/'),
       Store: path.resolve(__dirname, 'app/store/'),
       Routes: path.resolve(__dirname, 'app/routes/'),
+      Assets: path.resolve(__dirname, 'app/assets/'),
+      Services: path.resolve(__dirname, 'app/services/'),
     },
   },
   plugins: [

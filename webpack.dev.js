@@ -6,7 +6,7 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
 const enviromentConfig = common.plugins[0].definitions['process.env'];
 
-let config = 'window.TODOConfig= { ';
+let config = 'window.TODOConfig = { ';
 
 Object.keys(enviromentConfig).map((key, index) => {
   config += `${key}: ${enviromentConfig[key]}`;
@@ -60,6 +60,16 @@ module.exports = merge(common, {
               reloadAll: true,
             },
           },
+
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
           {
             loader: 'sass-loader',
             options: {
@@ -76,15 +86,6 @@ module.exports = merge(common, {
                 './app/assests/stylesheets/mixins/_mixins.scss',
               ],
             },
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
           },
         ],
       },
