@@ -33,8 +33,8 @@ export const todosSlice = createSlice({
       state.todosLoading = false;
     },
     [createTodo.fulfilled]: (state, action) => {
-      state.todos = action?.payload?.todos;
       state.todoLoading = false;
+      state.todos.push(action?.payload?.todo);
     },
     [createTodo.pending]: (state, action) => {
       state.todoLoading = action?.isLoading;
@@ -55,7 +55,10 @@ export const todosSlice = createSlice({
       state.deleteTodoLoading = false;
     },
     [updateTodo.fulfilled]: (state, action) => {
-      state.todos = action?.payload?.todos;
+      const todoIndex = state.todos.findIndex(
+        (todo) => todo.id === action?.payload?.todo?.id
+      );
+      state.todos[todoIndex].completed = action?.payload?.todo?.completed;
       state.updateTodoLoading = false;
     },
     [updateTodo.pending]: (state, action) => {

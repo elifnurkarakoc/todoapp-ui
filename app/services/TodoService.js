@@ -2,8 +2,7 @@
 import BaseService from './BaseService';
 
 const baseService = new BaseService({
-  baseURL: 'http://localhost:8081',
-  //window.TODOConfig.API_URL
+  baseURL: window?.TODOConfig?.API_URL,
 });
 
 class TodoService {

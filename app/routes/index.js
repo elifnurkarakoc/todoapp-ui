@@ -15,8 +15,8 @@ const RootRouter = () => {
 
   return (
     <Routes>
-      <Route path="/*" element={renderDashboard()} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="/" element={renderDashboard()} />
+      <Route path="*" element={<Navigate to="/" replace={true} />} />
     </Routes>
   );
 };

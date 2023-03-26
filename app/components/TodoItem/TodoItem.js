@@ -23,7 +23,7 @@ const TodoItem = ({ todo, onChange, onDeleteClick }) => {
   };
 
   return (
-    <div className="todoItemHolder">
+    <li className="todoItemHolder">
       <Checkbox
         label={todo?.name}
         value={todo?.completed}
@@ -32,7 +32,7 @@ const TodoItem = ({ todo, onChange, onDeleteClick }) => {
       <div onClick={handleClick} className="deleteIconHolder">
         <DeleteIcon />
       </div>
-    </div>
+    </li>
   );
 };
 

@@ -26,7 +26,9 @@ const Dashboard = () => {
   const { todos } = useSelector((state) => state?.todos);
 
   const handleSubmit = ({ inputValue }) => {
-    dispatch(createTodo({ name: inputValue }));
+    if (inputValue?.trim().length > 0) {
+      dispatch(createTodo({ name: inputValue }));
+    }
   };
 
   const handleChange = ({ completed, id }) => {

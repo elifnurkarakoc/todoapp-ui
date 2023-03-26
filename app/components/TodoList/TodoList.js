@@ -10,7 +10,7 @@ import './TodoList.scss';
 
 const TodoList = ({ todos, onChange, onDeleteClick }) => {
   return (
-    <div className="todoListholder">
+    <ul className="todoListholder">
       {todos?.map((todo) => (
         <TodoItem
           key={todo?.name}
@@ -19,7 +19,8 @@ const TodoList = ({ todos, onChange, onDeleteClick }) => {
           onDeleteClick={onDeleteClick}
         />
       ))}
-    </div>
+      {todos?.length === 0 && <p className="notExistHolder">Not exist</p>}
+    </ul>
   );
 };
 

@@ -31,6 +31,15 @@ module.exports = merge(common, {
             },
           },
           {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
@@ -46,15 +55,6 @@ module.exports = merge(common, {
                 './app/assests/stylesheets/mixins/_mixins.scss',
               ],
             },
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
           },
         ],
       },

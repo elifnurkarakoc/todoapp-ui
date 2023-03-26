@@ -6,16 +6,16 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
 const enviromentConfig = common.plugins[0].definitions['process.env'];
 
-let config = 'window.TODOConfig = { ';
+let todoConfig = 'window.TODOConfig = { ';
 
 Object.keys(enviromentConfig).map((key, index) => {
-  config += `${key}: ${enviromentConfig[key]}`;
+  todoConfig += `${key}: ${enviromentConfig[key]}`;
   if (Object.keys(enviromentConfig).length > index + 1) {
-    config += ', ';
+    todoConfig += ', ';
   }
 });
 
-config += '}';
+todoConfig += '}';
 
 module.exports = merge(common, {
   mode: 'development',
@@ -34,7 +34,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      enviroment: `<script>${config}</script>`,
+      enviroment: `<script>${todoConfig}</script>`,
     }),
     new BundleAnalyzerPlugin(),
     new ExtractCssChunks({

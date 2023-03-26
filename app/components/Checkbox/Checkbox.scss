@@ -6,10 +6,11 @@
   gap: 24px;
 
   span {
+    cursor: pointer;
     @include truncateText();
 
     @include respond-to(min-small-screens) {
-      width: 540px;
+      width: 460px;
     }
 
     @include respond-to(max-extra-small-screens) {
