@@ -11,7 +11,7 @@ import './TodoList.scss';
 const TodoList = ({ todos, onChange, onDeleteClick }) => {
   return (
     <ul className="todoListholder">
-      {todos?.map((todo) => (
+      {todos?.map(todo => (
         <TodoItem
           key={todo?.name}
           todo={todo}

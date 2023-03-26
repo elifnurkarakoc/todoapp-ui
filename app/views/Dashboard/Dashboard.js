@@ -23,7 +23,7 @@ const Dashboard = () => {
     dispatch(getTodos());
   }, []);
 
-  const { todos } = useSelector((state) => state?.todos);
+  const { todos } = useSelector(state => state?.todos);
 
   const handleSubmit = ({ inputValue }) => {
     if (inputValue?.trim().length > 0) {

@@ -56,7 +56,7 @@ export const todosSlice = createSlice({
     },
     [updateTodo.fulfilled]: (state, action) => {
       const todoIndex = state.todos.findIndex(
-        (todo) => todo.id === action?.payload?.todo?.id
+        todo => todo.id === action?.payload?.todo?.id
       );
       state.todos[todoIndex].completed = action?.payload?.todo?.completed;
       state.updateTodoLoading = false;

@@ -12,7 +12,7 @@ import './TodoInput.scss';
 const TodoInput = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     if (onSubmit) {
@@ -21,7 +21,7 @@ const TodoInput = ({ onSubmit }) => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { value } = e.target;
     setInputValue(value);
   };
@@ -32,7 +32,7 @@ const TodoInput = ({ onSubmit }) => {
         type="text"
         placeholder="New Todo"
         value={inputValue}
-        onChange={(e) => handleChange(e)}
+        onChange={e => handleChange(e)}
       />
       <Button text="Add" type="submit" />
     </form>

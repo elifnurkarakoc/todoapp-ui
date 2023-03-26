@@ -11,7 +11,7 @@ class TodoService {
     return baseService.get('/todos');
   };
 
-  createTodo = (payload) => {
+  createTodo = payload => {
     return baseService.post('/todos', payload);
   };
 

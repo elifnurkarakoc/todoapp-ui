@@ -9,8 +9,7 @@ import RootRouter from 'Routes';
 /** Store */
 import store from 'Store/store';
 
-function App() {
-  console.log(window.TODOConfig);
+const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -18,6 +17,6 @@ function App() {
       </BrowserRouter>
     </Provider>
   );
-}
+};
 
 export default App;
