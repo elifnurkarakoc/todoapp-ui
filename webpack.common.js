@@ -46,7 +46,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': newConfig,
+      'process.env': JSON.stringify(newConfig),
     }),
   ],
 };

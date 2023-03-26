@@ -7,7 +7,7 @@ import './Button.scss';
 
 const Button = ({ text, ...buttonProps }) => {
   return (
-    <button className="buttonHolder" disabled {...buttonProps}>
+    <button className="buttonHolder" {...buttonProps}>
       {text}
     </button>
   );
